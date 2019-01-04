@@ -43,13 +43,6 @@ $(document).ready(function(){
     });
   });
 
-  // Allows for "Enter" to be pressed to submit one of the text boxes is in focus
-  $("#email-input").keyup(function(event){
-    if(event.keyCode == 13){
-        $("#signup-button").click();
-    }
-  });
-
   // Handles button animation on hover
   $('#signup-button').mouseenter(function(){
     $(this).animate({'opacity': '0.75'}, 300);
