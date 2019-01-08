@@ -32,82 +32,82 @@ $success: #12A577; // shade of green for indicating success
 /* ----------------------- RULES ----------------------- */
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* ------------------- Text and Fonts ------------------ */
 @mixin bold {
-	font-weight: 700;
+  font-weight: 700;
 }
 
 @mixin heavy-bold {
-	font-weight: 900;
+  font-weight: 900;
 }
 
 @font-face {
-	font-family: CircularStd; 
-	src: url('../Fonts/CircularStd-Book.otf');
-	font-weight: normal;
-	font-style: normal;
+  font-family: CircularStd; 
+  src: url('../Fonts/CircularStd-Book.otf');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-	font-family: CircularStd; 
-	src: url('../Fonts/CircularStd-BookItalic.otf');
-	font-weight: normal;
-	font-style: italic;
+  font-family: CircularStd; 
+  src: url('../Fonts/CircularStd-BookItalic.otf');
+  font-weight: normal;
+  font-style: italic;
 }
 
 @font-face {
-	font-family: CircularStd; 
-	src: url('../Fonts/CircularStd-Black.otf');
-	@include heavy-bold;
-	font-style: normal;
+  font-family: CircularStd; 
+  src: url('../Fonts/CircularStd-Black.otf');
+  @include heavy-bold;
+  font-style: normal;
 }
 
 @font-face {
-	font-family: CircularStd; 
-	src: url('../Fonts/CircularStd-BlackItalic.otf');
-	@include heavy-bold;
-	font-style: italic;
+  font-family: CircularStd; 
+  src: url('../Fonts/CircularStd-BlackItalic.otf');
+  @include heavy-bold;
+  font-style: italic;
 }
 
 @font-face {
-	font-family: CircularStd; 
-	src: url('../Fonts/CircularStd-Black.otf');
-	@include bold;
-	font-style: normal;
+  font-family: CircularStd; 
+  src: url('../Fonts/CircularStd-Black.otf');
+  @include bold;
+  font-style: normal;
 }
 
 @font-face {
-	font-family: CircularStd; 
-	src: url('../Fonts/CircularStd-BoldItalic.otf');
-	@include bold;
-	font-style: italic;
+  font-family: CircularStd; 
+  src: url('../Fonts/CircularStd-BoldItalic.otf');
+  @include bold;
+  font-style: italic;
 }
 
 h1 {
-	font-size: $h1-multiplier * $normal-font-size;
-	@include heavy-bold;
-	margin: 0.5 * $h1-multiplier * $normal-font-size 0;
+  font-size: $h1-multiplier * $normal-font-size;
+  @include heavy-bold;
+  margin: 0.5 * $h1-multiplier * $normal-font-size 0;
 }
 
 h2 {
-	font-size: $h2-multiplier * $normal-font-size;
-	@include heavy-bold;
-	margin: 0.5 * $h2-multiplier * $normal-font-size 0;
+  font-size: $h2-multiplier * $normal-font-size;
+  @include heavy-bold;
+  margin: 0.5 * $h2-multiplier * $normal-font-size 0;
 }
 
 h3 {
-	font-size: $h3-multiplier * $normal-font-size;
-	@include bold;
-	margin: 0;
-	margin: 0.5 * $h3-multiplier * $normal-font-size 0;
+  font-size: $h3-multiplier * $normal-font-size;
+  @include bold;
+  margin: 0;
+  margin: 0.5 * $h3-multiplier * $normal-font-size 0;
 }
 
 body {
-	font-size: $normal-font-size;
-	font-family: CircularStd, Helvetica, Arial, sans-serif;
+  font-size: $normal-font-size;
+  font-family: CircularStd, Helvetica, Arial, sans-serif;
 }
 
 p a {
@@ -120,164 +120,163 @@ p a {
 }
 
 .quote, %quote {
-	font-style: italic;
+  font-style: italic;
 }
 
 .blockquote {
-	@extend %quote;
-	padding: 4% 8%;
+  @extend %quote;
+  padding: 4% 8%;
 }
 
 /* -------------- Header and Social Banners ------------ */
 header {
-	position: fixed;
-	width: 15%;
-	right: 0;
-	float: right;
-	padding-right: 5%;
-	display: flex;
-	justify-content: flex-end;
-	top: 0;
-	z-index: 2;
+  position: fixed;
+  width: 15%;
+  right: 0;
+  float: right;
+  padding-right: 5%;
+  display: flex;
+  justify-content: flex-end;
+  top: 0;
+  z-index: 2;
 }
 
 header a, header div {
-	margin: 0% 3%;
-	padding: 0%;
+  margin: 0% 3%;
+  padding: 0%;
 }
 
 .Banners img {
-	transform: translateY(-20px);
+  transform: translateY(-20px);
 }
 
 /* --------------------- Title Page -------------------- */
 #title-page {
-	background-color: $black;
-	background-image: url('../Media/Graphics/RainbowCatcher.png'), url('../Media/Graphics/RainbowCatcher.png');
-	background-repeat: no-repeat;
-	background-size: 130vw, 100vw 100vh;
-	background-position: -30vw 4vh, left -60vw bottom 4vh;
-	color: $white;
-	padding-bottom: 40vh;
+  background-color: $black;
+  background-image: url('../Media/Graphics/RainbowCatcher.png'), url('../Media/Graphics/RainbowCatcher.png');
+  background-repeat: no-repeat;
+  background-size: 130vw, 100vw 100vh;
+  background-position: -30vw 4vh, left -60vw bottom 4vh;
+  color: $white;
+  padding-bottom: 40vh;
 }
 
 #title-splash {
-	width: 100%;
-	height: 100vh;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	padding-bottom: 10vh;
-	padding-left: 5%;
-	text-align: left;
-	margin: 0%;
-	overflow-x: hidden;
-	
-	h1  {
-		font-size: 0.8 * $h1-multiplier * $normal-font-size;
-		margin: 0;
-	}
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 10vh;
+  padding-left: 5%;
+  text-align: left;
+  margin: 0%;
+  overflow-x: hidden;
+  
+  h1  {
+    font-size: 0.8 * $h1-multiplier * $normal-font-size;
+    margin: 0;
+  }
 
-	h2  {
-		font-size: 0.8 * $h2-multiplier * $normal-font-size;
-		margin: 0;
-	}
+  h2  {
+    font-size: 0.8 * $h2-multiplier * $normal-font-size;
+    margin: 0;
+  }
 
-	.arrow {
-		display: inline-block;
-		background-image: url('../Media/Icons/DownArrow.png');
-		background-size: contain;
-		background-repeat: no-repeat;
-		width: 2vw;
-		height: 2vw;
-	}
+  .arrow {
+    display: inline-block;
+    background-image: url('../Media/Icons/DownArrow.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 2vw;
+    height: 2vw;
+  }
 }
 
 #intro-1  {
-	margin-left: 45vw;
-	margin-top: 30vh;
-	margin-right: 5%;
-	padding: 2vh 2vw;
-	width: 50vw;
-	background-color: $black;
+  margin-left: 45vw;
+  margin-top: 30vh;
+  margin-right: 5%;
+  padding: 2vh 2vw;
+  width: 50vw;
+  background-color: $black;
 }
 
 #intro-2  {
-	margin-left: 10%;
-	margin-top: 15vh;
-	margin-right: 10%;
-	padding: 2vh 2vw;
-	background-color: $black;
+  margin-left: 10%;
+  margin-top: 15vh;
+  margin-right: 10%;
+  padding: 2vh 2vw;
+  background-color: $black;
 }
 
 /* -------------------- Content Pages ------------------ */
 .content-page {
-	width: 100%;
-	margin: 50vh 0;
-	padding: 0% 10%;
-	position: relative;
-	
-	.header-number {
-		font-size: 25rem;
-		position: absolute;
-		line-height: 0.8;
-		top: -15%;
-		left: 5%;
-		opacity: 0.4;
-	}
+  width: 100%;
+  margin: 50vh 0;
+  padding: 0% 10%;
+  position: relative;
+  
+  .header-number {
+    font-size: 25rem;
+    position: absolute;
+    line-height: 0.8;
+    top: -15%;
+    left: 5%;
+    opacity: 0.4;
+  }
 }
-
 
 /*---------------------------Footer---------------------------*/
 footer {
-	display: flex;
-	padding: 5vh 5vw 10vh 5vw;
-	flex-wrap: wrap;
-	background-color: $black;
-	position: relative;	
-	color: $white;
-	font-size: 0.9 * $normal-font-size;
+  display: flex;
+  padding: 5vh 5vw 10vh 5vw;
+  flex-wrap: wrap;
+  background-color: $black;
+  position: relative; 
+  color: $white;
+  font-size: 0.9 * $normal-font-size;
 
-	&:after {
-	  content: "";
-	  background-image: url('../Media/Icons/DRFLogoWhite.png');
-		background-repeat: no-repeat;
-		background-size: 50vw;
-		background-position: left -5vw bottom -16vw;
-	  opacity: 0.2;
-	  top: 0;
-	  left: 0;
-	  bottom: 0;
-	  right: 0;
-	  position: absolute;
-	}
+  &:after {
+    content: "";
+    background-image: url('../Media/Icons/DRFLogoWhite.png');
+    background-repeat: no-repeat;
+    background-size: 50vw;
+    background-position: left -5vw bottom -16vw;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+  }
 
-	& > * {
-		flex: 1 1 50%;
-		margin-top: 10vh;
-		z-index: 1;
-	}
+  & > * {
+    flex: 1 1 50%;
+    margin-top: 10vh;
+    z-index: 1;
+  }
 
-	#mailing-list {
-		margin-top: calc(10vh + #{0.5 * $h3-multiplier * $normal-font-size});
+  #mailing-list {
+    margin-top: calc(10vh + #{0.5 * $h3-multiplier * $normal-font-size});
 
-		p {
-			margin: 0;
-		}
+    p {
+      margin: 0;
+    }
 
-		form {
-			color: $black;
-		}
-	}
+    form {
+      color: $black;
+    }
+  }
 
-	ul {
-		list-style-type: none;
-		padding: 0;
-		margin: 0;
-	}
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
 }

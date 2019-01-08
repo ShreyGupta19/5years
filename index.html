@@ -1,128 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Dorm Room Fund 5&#45;Year Report</title>
-	<link rel="canonical" href="https://5years.dormroomfund.com/"/>
-	<link rel="icon" href="Media/DRFMedia/DRFIcon.png">
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/decorate.css">
-	<meta name="keywords" content="Dorm Room Fund, 5 Year Report, DRF">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/responsive.css">
-	<script src="https://code.jquery.com/jquery.min.js"></script>
-	<script src="js/app.js"></script>
-	<script src="js/smooth-scroll-master/dist/js/smooth-scroll.js"></script>
-	<meta prefix="og: http://ogp.me/ns#" property="og:url" content="https://5years.dormroomfund.com/">
-	<meta prefix="og: http://ogp.me/ns#" property="og:type" content="Website">
-	<meta prefix="og: http://ogp.me/ns#" property="og:title" content="DRF 5-Year Report">
-	<meta prefix="og: http://ogp.me/ns#" property="og:description" content="5 years of supporting the strongest community of student entrepreneurs">
-	<meta prefix="og: http://ogp.me/ns#" property="og:image" content="https://5years.dormroomfund.com/Media/DRFMedia/SocialSharePreview.png">
-	<meta prefix="og: http://ogp.me/ns#" property="og:image:alt" content="https://5years.dormroomfund.com/Media/DRFMedia/SocialShareImage.png">
+  <meta charset="UTF-8">
+  <title>Dorm Room Fund 5&#45;Year Report</title>
+  <link rel="canonical" href="https://5years.dormroomfund.com/"/>
+  <link rel="icon" href="Media/DRFMedia/DRFIcon.png">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/decorate.css">
+  <meta name="keywords" content="Dorm Room Fund, 5 Year Report, DRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <!-- <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?2.1.3"></script> -->
+  <script src="js/smooth-scroll-master/dist/js/smooth-scroll.js"></script>
+  <script src="js/app.js"></script>
+  <meta prefix="og: http://ogp.me/ns#" property="og:url" content="https://5years.dormroomfund.com/">
+  <meta prefix="og: http://ogp.me/ns#" property="og:type" content="Website">
+  <meta prefix="og: http://ogp.me/ns#" property="og:title" content="DRF 5-Year Report">
+  <meta prefix="og: http://ogp.me/ns#" property="og:description" content="5 years of supporting the strongest community of student entrepreneurs">
+  <meta prefix="og: http://ogp.me/ns#" property="og:image" content="https://5years.dormroomfund.com/Media/DRFMedia/SocialSharePreview.png">
+  <meta prefix="og: http://ogp.me/ns#" property="og:image:alt" content="https://5years.dormroomfund.com/Media/DRFMedia/SocialShareImage.png">
 </head>
 
 <body>
-	  <div id="fb-root"></div>
-	  <script>(function(d, s, id) {
-	    var js, fjs = d.getElementsByTagName(s)[0];
-	    if (d.getElementById(id)) return;
-	    js = d.createElement(s); js.id = id;
-	    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
-	    fjs.parentNode.insertBefore(js, fjs);
-	  }(document, 'script', 'facebook-jssdk'));</script>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 
-	<header>
-		<div data-href="https://5years.dormroomfund.com/" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="Banners"class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://5years.drf.vc"><img src="Media/Banner/FBBanner.png" width="37.5" height="93.75" alt="Facebook Banner"/></a></div>
-		<!-- https://developers.facebook.com/docs/plugins/share-button/ -->
+  <header>
+    <div data-href="https://5years.dormroomfund.com/" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="Banners"class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://5years.drf.vc"><img src="Media/Banner/FBBanner.png" width="37.5" height="93.75" alt="Facebook Banner"/></a></div>
+    <!-- https://developers.facebook.com/docs/plugins/share-button/ -->
 
-		<a class="Banners" href="https://twitter.com/share?&amp;related=twitterapi%2Ctwitter&amp;text=What%20are%20students%20capable%20of%20building?%20@DormRoomFund%20dove%20into%205%20years%20of%20portfolio%20data%20to%20find%20out%20--> " target="_blank"><img src="Media/Banner/TwitterBanner.png" width="37.5" height="93.75" alt="Twitter Banner"/></a>
-		<!-- https://dev.twitter.com/web/tweet-button/parameters -->
+    <a class="Banners" href="https://twitter.com/share?&amp;related=twitterapi%2Ctwitter&amp;text=What%20are%20students%20capable%20of%20building?%20@DormRoomFund%20dove%20into%205%20years%20of%20portfolio%20data%20to%20find%20out%20--> " target="_blank"><img src="Media/Banner/TwitterBanner.png" width="37.5" height="93.75" alt="Twitter Banner"/></a>
+    <!-- https://dev.twitter.com/web/tweet-button/parameters -->
 
-		<a class="Banners" href="https://www.linkedin.com/shareArticle?mini=true&url=https://5years.dormroomfund.com/?6&title=Dorm%20Room%20Fund%205%20Year%20Report&summary=5%20years%20of%20supporting%20the%20strongest%20community%20of%20student%20entrepreneurs&source=LinkedIn" target="_blank"><img src="Media/Banner/LinkedInBanner.png" width="37.5" height="93.75" alt="Linkedin Banner"/></a>
-		<!-- https://developer.linkedin.com/docs/share-on-linkedin -->
-	</header>
+    <a class="Banners" href="https://www.linkedin.com/shareArticle?mini=true&url=https://5years.dormroomfund.com/?6&title=Dorm%20Room%20Fund%205%20Year%20Report&summary=5%20years%20of%20supporting%20the%20strongest%20community%20of%20student%20entrepreneurs&source=LinkedIn" target="_blank"><img src="Media/Banner/LinkedInBanner.png" width="37.5" height="93.75" alt="Linkedin Banner"/></a>
+    <!-- https://developer.linkedin.com/docs/share-on-linkedin -->
+  </header>
 
-	<!-- ____________________________Title Screen____________________________ -->
-	<div id="title-page">
-		<div id='title-splash'>
-			<h1>2018 Diversity Report</h1>
-			<h2>Dorm Room Fund</h2>
-			<a class="arrow" href="#intro-1"></a>
-		</div>
+  <!-- ____________________________Title Screen____________________________ -->
+  <div id="title-page">
+    <div id='title-splash'>
+      <h1>2018 Diversity Report</h1>
+      <h2>Dorm Room Fund</h2>
+      <a class="arrow" href="#intro-1"></a>
+    </div>
 
-		<div id="intro-1">
-			<p>In 2012, we started Dorm Room Fund to create an onramp for students to become entrepreneurs and investors. Over the past six years, we’ve invested in over 250 student-led startups and built a community that consists of 400+ founders and 150+ investment partners and alumni.</p>
-			<p>In 2016, we published the first <a href="https://medium.com/@reiwang/the-first-ever-dorm-room-fund-diversity-report-99f9bc205cb7/" target="_blank">Dorm Room Fund diversity report</a> to begin to measure how we are doing when it comes to the diversity of our team and understand how far we have to go.</p>
-			<p>Over the past two years, and as we write this report, we realize that we need to evaluate the barriers to increased diversity before we can create a roadmap for change.</p>
-			<p>In this report, we reflect on the shortcomings of the industry (including our own) and suggest ways to support underrepresented founders and investors. We share these views in hopes to promote greater self- reflection, particularly for those who identify with more prevalent groups in these industries. We have created this report as a discussion piece and welcome any feedback, comments, or suggestions!</p>
-			<p>If you are an investor or founder who identifies as a woman or person of color, we would love if you can provides your thoughts to our survey [here]. We plan on publishing the results in the coming months and share our learnings to benefit the community.</p>
-		</div>
+    <div id="intro-1">
+      <p>In 2012, we started Dorm Room Fund to create an onramp for students to become entrepreneurs and investors. Over the past six years, we’ve invested in over 250 student-led startups and built a community that consists of 400+ founders and 150+ investment partners and alumni.</p>
+      <p>In 2016, we published the first <a href="https://medium.com/@reiwang/the-first-ever-dorm-room-fund-diversity-report-99f9bc205cb7/" target="_blank">Dorm Room Fund diversity report</a> to begin to measure how we are doing when it comes to the diversity of our team and understand how far we have to go.</p>
+      <p>Over the past two years, and as we write this report, we realize that we need to evaluate the barriers to increased diversity before we can create a roadmap for change.</p>
+      <p>In this report, we reflect on the shortcomings of the industry (including our own) and suggest ways to support underrepresented founders and investors. We share these views in hopes to promote greater self- reflection, particularly for those who identify with more prevalent groups in these industries. We have created this report as a discussion piece and welcome any feedback, comments, or suggestions!</p>
+      <p>If you are an investor or founder who identifies as a woman or person of color, we would love if you can provides your thoughts to our survey [here]. We plan on publishing the results in the coming months and share our learnings to benefit the community.</p>
+    </div>
 
-		<div id="intro-2">
-			<p>After working on the first report, our hypothesis was:</p>
-			<p class="blockquote">If we could build a more inclusive investment team that will eventually lead to a more diverse portfolio. Furthermore, if our alumni go on to become investors, operators, and entrepreneurs, Dorm Room Fund has an opportunity and a responsibility to bring more diverse students into the startup community early as this impact will compound and help create a more diverse startup ecosystem.</p>
-			<p>We wanted to find out if this hypothesis was true.</p>
-			<p>In this second report, we decided to go beyond measuring the makeup of our team to measuring the three key constituents of the Dorm Room Fund ecosystem to gain a more holistic picture and to learn how we can impact diversity and inclusion in the tech industry.</p>
-			<p>In this year’s survey, we decided to look at the relationships between the Dorm Room Fund investment team, the investments, and the alumni activities across two-time frames: the 2015-2016 school year and the 2016-2017 school year.</p>
-		</div>
-	</div>
+    <div id="intro-2">
+      <p>After working on the first report, our hypothesis was:</p>
+      <p class="blockquote">If we could build a more inclusive investment team that will eventually lead to a more diverse portfolio. Furthermore, if our alumni go on to become investors, operators, and entrepreneurs, Dorm Room Fund has an opportunity and a responsibility to bring more diverse students into the startup community early as this impact will compound and help create a more diverse startup ecosystem.</p>
+      <p>We wanted to find out if this hypothesis was true.</p>
+      <p>In this second report, we decided to go beyond measuring the makeup of our team to measuring the three key constituents of the Dorm Room Fund ecosystem to gain a more holistic picture and to learn how we can impact diversity and inclusion in the tech industry.</p>
+      <p>In this year’s survey, we decided to look at the relationships between the Dorm Room Fund investment team, the investments, and the alumni activities across two-time frames: the 2015-2016 school year and the 2016-2017 school year.</p>
+    </div>
+  </div>
 
-	<div class="content-page">
-		<div class="header-number">1</div>
-		<h1 class="section-title">The Limits of Trickle Down Diversity</h1>
-		<p>In the venture capital industry, we far too often rely on diverse investors to source and invest in diverse founders. This notion of trickle down diversity comes at a cost. Not only does trickle down diversity place an implicit burden on diverse investors, but it does not immediately move the needle on portfolio founders. As an example, while women in venture capital represent 8% of investment professionals, women only receive 2% of venture capital funding. It is not the fault of women or people of color to withstand hiring or investing in people of a similar background. In a report by Inc. Magazine, they found that some women venture capitalists are reluctant to invest in other women. If the investment is unsuccessful, they fear that they will not receive support for the next female team.</p>
-		<p>At Dorm Room Fund, we have not witnessed a significant correlation between underrepresented partners and portfolio founders. While Dorm Room Fund’s investors are increasingly diverse, more female and underrepresented partners do not immediately translate into a more diverse community of funded founders.</p>
-		<p>We have made significant strides when it comes to the makeup of our investment team. From 2015 to 2017, female partners increased by 9% to 37% and URM partners increased by 8% to 12%.</p>
-		<p>While recruitment of underrepresented investors is an issue of its own, we need to find other ways to attract and support underrepresented founders. At Dorm Room Fund, we believe that creating points of access for underrepresented founders can elevate their trajectory of success and outcomes. In 2018, we launched <a href="https://medium.com/@dormroomfund/announcing-the-future-female-founders-track-dd4ca44d6400/" target="_blank">Female Founders Track</a> to broaden access for female founders. The nine-session masterclass seeks to support promising female founders and provide them with mentorship and guidance as they build their startup.</p>
-	</div>
+  <div class="content-page">
+    <div class="header-number">1</div>
+    <h1 class="section-title">The Limits of Trickle Down Diversity</h1>
+    <p>In the venture capital industry, we far too often rely on diverse investors to source and invest in diverse founders. This notion of trickle down diversity comes at a cost. Not only does trickle down diversity place an implicit burden on diverse investors, but it does not immediately move the needle on portfolio founders. As an example, while women in venture capital represent 8% of investment professionals, women only receive 2% of venture capital funding. It is not the fault of women or people of color to withstand hiring or investing in people of a similar background. In a report by Inc. Magazine, they found that some women venture capitalists are reluctant to invest in other women. If the investment is unsuccessful, they fear that they will not receive support for the next female team.</p>
+    <p>At Dorm Room Fund, we have not witnessed a significant correlation between underrepresented partners and portfolio founders. While Dorm Room Fund’s investors are increasingly diverse, more female and underrepresented partners do not immediately translate into a more diverse community of funded founders.</p>
+    <p>We have made significant strides when it comes to the makeup of our investment team. From 2015 to 2017, female partners increased by 9% to 37% and URM partners increased by 8% to 12%.</p>
+    <p>While recruitment of underrepresented investors is an issue of its own, we need to find other ways to attract and support underrepresented founders. At Dorm Room Fund, we believe that creating points of access for underrepresented founders can elevate their trajectory of success and outcomes. In 2018, we launched <a href="https://medium.com/@dormroomfund/announcing-the-future-female-founders-track-dd4ca44d6400/" target="_blank">Female Founders Track</a> to broaden access for female founders. The nine-session masterclass seeks to support promising female founders and provide them with mentorship and guidance as they build their startup.</p>
+  </div>
 
-	<div class="content-page">
-		<div class="header-number">2</div>
-		<h1 class="section-title">The Diversity Debt Trap</h1>
-		<p class="quote">&ldquo;We take on this diversity debt believing it is the same as the other types of &ldquo;debt&rdquo; and can be paid back as we scale. I think diversity debt is different because unlike other startup debt, the cost of diversity debt, the effort required to pay it back, rises dramatically with scale.&rdquo; – Phin Barnes, First Round Capital</p>
-		<p>Culture starts at the top – but so does diversity. As founders hire employees that look like them from the very beginning, the company’s employee base grows to the point where there are few or no women or people of color. As time passes, achieving gender and racial equality becomes a challenge if companies do not prioritize hiring diverse talent from the beginning. Often, the technology industry discusses the importance of building a team’s culture from day zero. However, it is rare to hear conversations around creating a diverse team from day zero.</p>
-		<p>In the same way that engineers may develop products that scale with technical debt, there are founding teams that scale with diversity debt. According to Phin Barnes, a partner at First Round Capital, “We take on this diversity debt believing it is the same as the other types of “debt” and can be paid back as we scale. I think diversity debt is different because unlike other startup debt, the cost of diversity debt, the effort required to pay it back, rises dramatically with scale.”</p>
-		<p>Diversity debt accumulates over time as the founding team of a company hires within their social circle. The second employee then hires a team with a similar ethnographic which evolves to the point where the entire organization stems from a ‘patient zero.’ People hire others that are similar to themselves, or who are in their networks – if the founding team is not diverse, this will trickle down to each hierarchy of the company and impact its team structure all the way down to its newest intern. The result is a 50+ person company with minimal diversity in backgrounds, perspectives, and ideas.</p>
-		<strong>Here’s how diversity debt scales: 1) The company begins with its founders &rarr; 2) the founders hire VP’s &rarr; 3) VP’s hire Managers &rarr; 4) Managers hire Employees</strong>
-		<p>As the tech industry continues to face scrutiny around matters of diversity, it should come as no surprise that diversity debt accumulates over time. To combat homophily in the workforce, venture capital firms and tech companies have imposed various human capital strategies to enhance diversity in the workforce.</p>
-		<p>In 2016, Kapor Capital instituted a Founders Commitment whereby new portfolio companies agree to establish goals to enhance the representation of diverse employees.</p>
-		<p>In 2018, more than 500 VC-backed entrepreneurs and companies led an initiative called Founders for Change aiming to increase diverse representation in venture capital and technology firms. The initiatives website keeps a Diverse Investors List that allows for founders to find diverse VC investors.</p>
-		<p>Other companies have employed broader human capital practices such as incorporating the Rooney Rule to improve hiring practices, implementing affinity or mentorship groups, and forming diversity and inclusion leadership positions.</p>
-	</div>
-	
-	<footer>
-		<div id="attribution">
-			<h3>Made with Love by:</h3>
-			<ul>
-				<li>Mario Ruiz</li>
-				<li>Courtney Andrews</li>
-				<li>Lilly Wyden</li>
-				<li>Nashilu Mouen-Makoua</li>
-				<li>Haris Memon</li>
-				<li>Rei Wang</li>
-				<li>Shrey Gupta</li>
-				<li>Albert Dong</li>
-			</ul>
-		</div>
-		<div id="mailing-list">
-			<p>Want more insight on the state of student startups? Join the DRF Mailing List.</p>
-			<form id="signup-form">
-				<input id="email-input" type="email" name="email" placeholder="Email Address" value required>
-				<button id="signup-button" type="submit">Sign Up</button>
-			</form>
-		</div>
-		<div id="citations">
-			<h3>Citations</h3>
-			<ul>
-				<li>[1] Diversity Dividend, 2018</li>
-				<li>[2] Principles by Ray Dalio</li>
-				<li>[3] Sapiens, Original Hebrew, Abridged</li>
-				<li>[4] That one time my Walmart cashier mentioned something offhand and it stuck with me and changed my life</li>
-			</ul>
-		</div>
-	</footer>
-	<script>
-		var scroll = new SmoothScroll('a[href*="#"]');
-	</script>
+  <div class="content-page">
+    <div class="header-number">2</div>
+    <h1 class="section-title">The Diversity Debt Trap</h1>
+    <p class="quote">&ldquo;We take on this diversity debt believing it is the same as the other types of &ldquo;debt&rdquo; and can be paid back as we scale. I think diversity debt is different because unlike other startup debt, the cost of diversity debt, the effort required to pay it back, rises dramatically with scale.&rdquo; – Phin Barnes, First Round Capital</p>
+    <p>Culture starts at the top – but so does diversity. As founders hire employees that look like them from the very beginning, the company’s employee base grows to the point where there are few or no women or people of color. As time passes, achieving gender and racial equality becomes a challenge if companies do not prioritize hiring diverse talent from the beginning. Often, the technology industry discusses the importance of building a team’s culture from day zero. However, it is rare to hear conversations around creating a diverse team from day zero.</p>
+    <p>In the same way that engineers may develop products that scale with technical debt, there are founding teams that scale with diversity debt. According to Phin Barnes, a partner at First Round Capital, “We take on this diversity debt believing it is the same as the other types of “debt” and can be paid back as we scale. I think diversity debt is different because unlike other startup debt, the cost of diversity debt, the effort required to pay it back, rises dramatically with scale.”</p>
+    <p>Diversity debt accumulates over time as the founding team of a company hires within their social circle. The second employee then hires a team with a similar ethnographic which evolves to the point where the entire organization stems from a ‘patient zero.’ People hire others that are similar to themselves, or who are in their networks – if the founding team is not diverse, this will trickle down to each hierarchy of the company and impact its team structure all the way down to its newest intern. The result is a 50+ person company with minimal diversity in backgrounds, perspectives, and ideas.</p>
+    <strong>Here’s how diversity debt scales: 1) The company begins with its founders &rarr; 2) the founders hire VP’s &rarr; 3) VP’s hire Managers &rarr; 4) Managers hire Employees</strong>
+    <p>As the tech industry continues to face scrutiny around matters of diversity, it should come as no surprise that diversity debt accumulates over time. To combat homophily in the workforce, venture capital firms and tech companies have imposed various human capital strategies to enhance diversity in the workforce.</p>
+    <p>In 2016, Kapor Capital instituted a Founders Commitment whereby new portfolio companies agree to establish goals to enhance the representation of diverse employees.</p>
+    <p>In 2018, more than 500 VC-backed entrepreneurs and companies led an initiative called Founders for Change aiming to increase diverse representation in venture capital and technology firms. The initiatives website keeps a Diverse Investors List that allows for founders to find diverse VC investors.</p>
+    <p>Other companies have employed broader human capital practices such as incorporating the Rooney Rule to improve hiring practices, implementing affinity or mentorship groups, and forming diversity and inclusion leadership positions.</p>
+  </div>
+  
+  <footer>
+    <div id="attribution">
+      <h3>Made with Love by:</h3>
+      <ul>
+        <li>Mario Ruiz</li>
+        <li>Courtney Andrews</li>
+        <li>Lilly Wyden</li>
+        <li>Nashilu Mouen-Makoua</li>
+        <li>Haris Memon</li>
+        <li>Rei Wang</li>
+        <li>Shrey Gupta</li>
+        <li>Albert Dong</li>
+      </ul>
+    </div>
+    <div id="mailing-list">
+      <p>Want more insight on the state of student startups? Join the DRF Mailing List.</p>
+      <form id="signup-form">
+        <input id="email-input" type="email" name="email" placeholder="Email Address" value required>
+        <button id="signup-button" type="submit">Sign Up</button>
+      </form>
+    </div>
+    <div id="citations">
+      <h3>Citations</h3>
+      <ul>
+        <li>[1] Diversity Dividend, 2018</li>
+        <li>[2] Principles by Ray Dalio</li>
+        <li>[3] Sapiens, Original Hebrew, Abridged</li>
+        <li>[4] That one time my Walmart cashier mentioned something offhand and it stuck with me and changed my life</li>
+      </ul>
+    </div>
+  </footer>
+  <script>
+    var scroll = new SmoothScroll('a[href*="#"]');
+  </script>
 </body>
 </html>
