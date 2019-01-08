@@ -5,20 +5,6 @@ $(document).ready(function(){
     arrowHop();
   });
 
-  // Handles the banner hop animation
-  $('.Banners').mouseenter(function(){
-    $(this).find('img').finish().show()
-    .animate({'margin-top':'15px'}, 250);
-  });
-  $('.Banners').mouseleave(function(){
-    $(this).find('img').finish().show()
-    .animate({'margin-top':'0px'}, 350);
-  });
-  $('.Banners').click(function(){
-    $(this).find('img').finish().show()
-    .animate({'margin-top':'0px'}, 350);
-  });
-
   // Controls the newsletter signup responses
   $('form#signup-form').submit(function(e){
     e.preventDefault();
