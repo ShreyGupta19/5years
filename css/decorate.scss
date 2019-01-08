@@ -36,6 +36,18 @@ $success: #12A577; // shade of green for indicating success
 }
 
 /* ------------------- Text and Fonts ------------------ */
+@mixin light {
+  font-weight: 300;
+}
+
+@mixin book {
+  font-weight: 400;
+}
+
+@mixin semi-bold {
+  font-weight: 600;
+}
+
 @mixin bold {
   font-weight: 700;
 }
@@ -47,14 +59,14 @@ $success: #12A577; // shade of green for indicating success
 @font-face {
   font-family: CircularStd; 
   src: url('../Fonts/CircularStd-Book.otf');
-  font-weight: normal;
+  @include book;
   font-style: normal;
 }
 
 @font-face {
   font-family: CircularStd; 
   src: url('../Fonts/CircularStd-BookItalic.otf');
-  font-weight: normal;
+  @include book;
   font-style: italic;
 }
 
@@ -84,6 +96,30 @@ $success: #12A577; // shade of green for indicating success
   src: url('../Fonts/CircularStd-BoldItalic.otf');
   @include bold;
   font-style: italic;
+}
+
+@font-face {
+  font-family: Lemonada; 
+  src: url('../Fonts/Lemonada-Light.ttf');
+  @include light;
+}
+
+@font-face {
+  font-family: Lemonada; 
+  src: url('../Fonts/Lemonada-Regular.ttf');
+  @include book;
+}
+
+@font-face {
+  font-family: Lemonada; 
+  src: url('../Fonts/Lemonada-SemiBold.ttf');
+  @include semi-bold;
+}
+
+@font-face {
+  font-family: Lemonada; 
+  src: url('../Fonts/Lemonada-Bold.ttf');
+  @include bold;
 }
 
 h1 {
