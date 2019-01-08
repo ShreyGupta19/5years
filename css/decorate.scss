@@ -98,10 +98,6 @@ $L40: #B1BCFF; // used for links underscores on white backgrounds
   font-weight: 700;
 }
 
-@mixin heavy-bold {
-  font-weight: 900;
-}
-
 @font-face {
   font-family: CircularStd; 
   src: url('../Fonts/CircularStd-Book.otf');
@@ -132,29 +128,15 @@ $L40: #B1BCFF; // used for links underscores on white backgrounds
 
 @font-face {
   font-family: CircularStd; 
-  src: url('../Fonts/CircularStd-Black.otf');
+  src: url('../Fonts/CircularStd-Bold.otf');
   @include bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: CircularStd; 
-  src: url('../Fonts/CircularStd-BlackItalic.otf');
-  @include bold;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: CircularStd; 
-  src: url('../Fonts/CircularStd-Black.otf');
-  @include heavy-bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: CircularStd; 
   src: url('../Fonts/CircularStd-BoldItalic.otf');
-  @include heavy-bold;
+  @include bold;
   font-style: italic;
 }
 
@@ -184,13 +166,13 @@ $L40: #B1BCFF; // used for links underscores on white backgrounds
 
 h1 {
   font-size: $h1-multiplier * $normal-font-size;
-  @include heavy-bold;
+  @include bold;
   margin: 0.5 * $h1-multiplier * $normal-font-size 0;
 }
 
 h2 {
   font-size: $h2-multiplier * $normal-font-size;
-  @include heavy-bold;
+  @include bold;
   margin: 0.5 * $h2-multiplier * $normal-font-size 0;
 }
 
@@ -204,6 +186,8 @@ h3 {
 body {
   font-size: $normal-font-size;
   font-family: CircularStd, Helvetica, Arial, sans-serif;
+  background-color: $fauxwhite;
+  color: $offblack;
 }
 
 p a {
@@ -247,13 +231,13 @@ header a, header div {
 
 /* --------------------- Title Page -------------------- */
 #title-page {
-  background-color: $black;
+  background-color: $N100;
   background-image: url('../Media/Graphics/RainbowCatcher.png'), url('../Media/Graphics/RainbowCatcher.png');
   background-repeat: no-repeat;
   background-size: 130vw, 100vw 100vh;
   background-position: -30vw 4vh, left -60vw bottom 4vh;
-  color: $white;
-  padding-bottom: 40vh;
+  color: $fauxwhite;
+  padding-bottom: 30vh;
 }
 
 #title-splash {
@@ -264,13 +248,8 @@ header a, header div {
   left: 0;
   right: 0;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding-bottom: 10vh;
-  padding-left: 5%;
+  padding: 55vh 7.5% 0vh 7.5%;
   text-align: left;
-  margin: 0%;
   overflow-x: hidden;
   
   h1  {
@@ -281,40 +260,45 @@ header a, header div {
   h2  {
     font-size: $h2-multiplier * $normal-font-size;
     margin: 0;
+    font-weight: 500;
   }
 
   .arrow {
     display: inline-block;
     background-image: url('../Media/Icons/DownArrow.png');
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    width: 2vw;
-    height: 2vw;
+    width: 0.7778 * $h2-multiplier * $normal-font-size;
+    height: $h2-multiplier * $normal-font-size;
+    margin-top: $h2-multiplier * $normal-font-size / 2;
   }
 }
 
 #intro-1  {
   margin-left: 45vw;
-  margin-top: 30vh;
-  margin-right: 5%;
-  padding: 2vh 2vw;
+  margin-top: -10vh;
+  margin-right: 5vw;
+  padding: 3vw 4vw;
   width: 50vw;
-  background-color: $black;
+  background-color: $N100;
+
+  p:first-of-type {
+    margin-top: 0;
+  }
 }
 
 #intro-2  {
-  margin-left: 10%;
-  margin-top: 15vh;
-  margin-right: 10%;
-  padding: 2vh 2vw;
-  background-color: $black;
+  margin: 15vh 7.5vw 0 7.5vw;
+  padding: 3vw 4vw;
+  background-color: $N100;
 }
 
 /* -------------------- Content Pages ------------------ */
 .content-page {
   width: 100%;
-  margin: 50vh 0;
-  padding: 0% 10%;
+  margin: 30vh auto;
+  padding: 0% 15%;
+  max-width: 1200px;
   position: relative;
   
   .header-number {
@@ -322,9 +306,9 @@ header a, header div {
     font-family: Lemonada, CircularStd, Helvetica, Arial, sans-serif;
     position: absolute;
     line-height: 0.8;
-    top: -0.4em;
-    left: 5%;
-    opacity: 0.3;
+    top: -0.3em;
+    left: 10%;
+    opacity: 0.4;
     z-index: -1;
   }
 
@@ -342,6 +326,11 @@ header a, header div {
 
   &:nth-child(4n+0) .header-number {
     color: $DRFRed;
+  }
+
+  img {
+    width: 80%;
+    margin: 1em 10%;
   }
 }
 
