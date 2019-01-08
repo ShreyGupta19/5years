@@ -44,6 +44,10 @@ $success: #12A577; // shade of green for indicating success
   font-weight: 400;
 }
 
+@mixin medium {
+  font-weight: 500;
+}
+
 @mixin semi-bold {
   font-weight: 600;
 }
@@ -72,15 +76,15 @@ $success: #12A577; // shade of green for indicating success
 
 @font-face {
   font-family: CircularStd; 
-  src: url('../Fonts/CircularStd-Black.otf');
-  @include heavy-bold;
+  src: url('../Fonts/CircularStd-Medium.otf');
+  @include medium;
   font-style: normal;
 }
 
 @font-face {
   font-family: CircularStd; 
-  src: url('../Fonts/CircularStd-BlackItalic.otf');
-  @include heavy-bold;
+  src: url('../Fonts/CircularStd-MediumItalic.otf');
+  @include medium;
   font-style: italic;
 }
 
@@ -93,8 +97,22 @@ $success: #12A577; // shade of green for indicating success
 
 @font-face {
   font-family: CircularStd; 
-  src: url('../Fonts/CircularStd-BoldItalic.otf');
+  src: url('../Fonts/CircularStd-BlackItalic.otf');
   @include bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: CircularStd; 
+  src: url('../Fonts/CircularStd-Black.otf');
+  @include heavy-bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: CircularStd; 
+  src: url('../Fonts/CircularStd-BoldItalic.otf');
+  @include heavy-bold;
   font-style: italic;
 }
 
