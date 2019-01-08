@@ -232,8 +232,16 @@ header a, header div {
   }
 }
 
+g.slice path:hover {
+  filter: brightness(1.5);
+}
+
 g.slice text {
   fill: white;
+}
+
+g.slice tspan.pie-label {
+  font-weight: 700;
 }
 
 
