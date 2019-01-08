@@ -345,17 +345,48 @@ header a, header div {
   }
 }
 
-g.slice path:hover {
-  filter: brightness(1.5);
+.pie {
+  display: flex;
+  margin: 1em;
+
+  svg {
+    display: block;
+  }
+
+  g.slice {
+    text {
+      fill: white;
+    }
+    
+    tspan.pie-label {
+      @include medium;
+    }
+  }
+
+  .pie-diagram {
+    flex: 1 1;
+    max-width: 250px;
+  }
+
+  .pie-description {
+    flex: 3 1;
+    padding-left: 5%;
+  }
+
+  .pie-tagline {
+    @include medium;
+    font-size: $big-p-multiplier * $normal-font-size;
+    margin: 0;
+  }
+
+  .pie-sub-tagline {
+    margin-top: 0.4em;
+    color: $gray;
+    font-style: italic;
+  }
 }
 
-g.slice text {
-  fill: white;
-}
 
-g.slice tspan.pie-label {
-  font-weight: 700;
-}
 
 
 /*---------------------------Footer---------------------------*/

@@ -37,11 +37,29 @@ $(document).ready(function(){
     $(this).animate({'opacity': '1'}, 300);
   });
 
-  data = [{"label": "Leader", "value": 50, "color": "#0d1ccd"},
-          {"label": "Mediator", "value": 28, "color": "#1426f9"},
-          {"label": "Listener", "value": 22, "color": "#3d43fb"}].reverse();
+  makeSVGPieChart("#identity-male-pie", [
+    {"label": "Leader", "value": 50, "color": "#0d1ccd"},
+    {"label": "Listener", "value": 22, "color": "#3d43fb", "x_margin": 1.3, "y_margin": 1.1},
+    {"label": "Mediator", "value": 28, "color": "#1426f9", "x_margin": 1.2},
+  ].reverse());
 
-  makeSVGPieChart("#pieChart", data);
+  makeSVGPieChart("#identity-female-pie", [
+    {"label": "Leader", "value": 36, "color": "#0d1ccd"},
+    {"label": "Listener", "value": 46, "color": "#3d43fb"},
+    {"label": "Mediator", "value": 18, "color": "#1426f9", "x_margin": 1.5, "y_margin": 1.1},
+  ].reverse());
+
+  makeSVGPieChart("#future-male-pie", [
+    {"label": "Founder", "value": 50, "color": "#0d1ccd"},
+    {"label": "VC", "value": 35, "color": "#3d43fb"},
+    {"label": "Other", "value": 15, "color": "#1426f9", "x_margin": 1.3, "y_margin": 1.3},
+  ].reverse());
+
+  makeSVGPieChart("#future-female-pie", [
+    {"label": "Founder", "value": 27, "color": "#0d1ccd", "x_margin": 1.2},
+    {"label": "VC", "value": 45, "color": "#3d43fb"},
+    {"label": "Other", "value": 28, "color": "#1426f9", "x_margin": 1.15, "y_margin": 1.15},
+  ].reverse());
 });
 
 // Controls arrow hopping animation when mouse hovers over
@@ -59,14 +77,11 @@ function arrowHop() {
 
 function makeSVGPieChart(element, data) {
   RADIUS = 100;
-  MARGIN = 5;
-  MARGIN_MULT = 1.2;
 
   let vis = d3.select(element)
     .append("svg:svg")
-      .data([data]).attr("width", 2 * RADIUS).attr("height", 2 * RADIUS)
-    .append("svg:g")
-      .attr("transform", `translate(${RADIUS},${RADIUS})`);
+      .data([data]).attr("viewBox", `-${RADIUS} -${RADIUS} ${2*RADIUS} ${2*RADIUS}`)
+      .attr("preserveAspectRatio", "xMidYMid slice")
 
   let arc = d3.arc().outerRadius(RADIUS).innerRadius(0);
 
@@ -100,9 +115,11 @@ function makeSVGPieChart(element, data) {
 
   texts.attr("transform", function(d) {
     let [x, y] = arc.centroid(d);
-    if ((x > 0 && x - this.getBBox().width / 2 < MARGIN) ||
-        (x < 0 && x + this.getBBox().width / 2 > -MARGIN)){
-      x *= MARGIN_MULT
+    if (d.data.x_margin){
+      x *= d.data.x_margin
+    }
+    if (d.data.y_margin){
+      y *= d.data.y_margin
     }
     return `translate(${x},${y})`;
   });
