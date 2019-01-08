@@ -2,9 +2,10 @@
 
 /* -------------------- FONT SIZES --------------------- */
 $normal-font-size: 1.375rem;
-$h1-multiplier: 3.62;
-$h2-multiplier: 1.81;
-$h3-multiplier: 1.27;
+$h1-multiplier: 3.273;
+$h2-multiplier: 1.455;
+$h3-multiplier: 1.455;
+$big-p-multiplier: 1.273;
 
 /* ---------------------- COLORS ----------------------- */
 /* -------------------- Main Colors -------------------- */
@@ -13,13 +14,23 @@ $DRFRed: #DA1301;
 $DRFYellow: #FEAB06;
 $DRFGreen: #1DD79D;
 /* ------------------- Neutral Tones ------------------- */
-$white: #FFFFFF;
-$fauxwhite: #F7F7F8; //used for white text on a black background
-$black: #050B1A;
-$offblack: #1B202D; //used for black text on a white background
-$darkgray: #6D7580; //used as gray text on a white background
-$gray: #A5ACB3;
-$lightgray: #F7F7F8; //used for gray backgrounds
+$N0: #FFFFFF;
+$white: $N0;
+$N3: #F7F7F8;
+$fauxwhite: $N3; //used for white text on a black background or gray backgrounds
+$N5: #F2F2F4;
+$N10: #DADDE0;
+$N30: #A5ACB1;
+$gray: $N30; //used as gray text on a black background
+$N40: #858E94;      //used when we need a gray background
+$N50: #6D757E;
+$darkgray: $N50; //used as gray text on a white background
+$N80: #313543;
+$N90: #1B202D;
+$offblack: $N90; //used for black text on a white background
+$N95: #050B1A;
+$black: $N95;
+$N100: #000000;
 /* ------------------ Feedback Colors ------------------ */
 // We use these 4 colors to give the user knowledge of the range of possible 
 // actions and their results. They should be used only as this and nowhere else.
@@ -27,6 +38,37 @@ $informational: #3472FF; // shade of blue for hyperlinks + positive feedback
 $error: #EO3229; // shade of red for indicating failure
 $warning: #FFD23D; // shade of yellow for feedback text 
 $success: #12A577; // shade of green for indicating success
+
+/* ----------------------- Blues ----------------------- */
+$B90: #0503A6;
+$B70: #0702D1; // same as $DRFBlue
+$B50: #040BEC;
+$B40: #2439F5;
+$B5: #D8DDFD;
+
+/* ------------------------ Reds ----------------------- */
+$R90: #B80F00;
+$R70: #DA1301; // same as $DRFRed
+$R50: #F11809;
+$R40: #F24E45;
+$R5: #FBDDDA;
+
+/* ---------------------- Yellows ---------------------- */
+$Y90: #EB9C00;
+$Y70: #FEAB06; // same as $DRFYellow
+$Y50: #FEC025;
+$Y40: #FAD552;
+$Y5: #FEF8D8;
+
+/* ----------------------- Greens ---------------------- */
+$Y90: #15B784;
+$Y70: #1DD79D; // same as $DRFGreen
+$Y50: #35E3AC;
+$Y40: #70E6C0;
+$G5: #DAFBF1;
+
+/* ----------------------- Links ----------------------- */
+$L40: #B1BCFF; // used for links underscores on white backgrounds
 
 
 /* ----------------------- RULES ----------------------- */
@@ -233,12 +275,12 @@ header a, header div {
   overflow-x: hidden;
   
   h1  {
-    font-size: 0.8 * $h1-multiplier * $normal-font-size;
+    font-size: 0.861 * $h1-multiplier * $normal-font-size;
     margin: 0;
   }
 
   h2  {
-    font-size: 0.8 * $h2-multiplier * $normal-font-size;
+    font-size: $h2-multiplier * $normal-font-size;
     margin: 0;
   }
 
