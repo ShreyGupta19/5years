@@ -37,33 +37,55 @@ $(document).ready(function(){
     $(this).animate({'opacity': '1'}, 300);
   });
 
+  makeSVGHorizStackedBarChart("#red-queens-founders-bar", [
+    [
+      {"label": "Male", "value": 89, "color": "#8c0c01", "lcolor": "#f7f7f8"},
+      {"label": "Female", "value": 11, "color": "#da1301", "lcolor": "#000000"},
+    ],
+    [
+      {"label": "Non-URM", "value": 94, "color": "#8c0c01", "lcolor": "#f7f7f8"},
+      {"label": "URM", "value": 6, "color": "#da1301", "lcolor": "#000000"},
+    ]
+  ]);
+
+  makeSVGHorizStackedBarChart("#red-queens-drf-bar", [
+    [
+      {"label": "Male", "value": 68, "color": "#8c0c01", "lcolor": "#f7f7f8"},
+      {"label": "Female", "value": 32, "color": "#da1301", "lcolor": "#000000"},
+    ],
+    [
+      {"label": "Non-URM", "value": 94, "color": "#8c0c01", "lcolor": "#f7f7f8"},
+      {"label": "URM", "value": 6, "color": "#da1301", "lcolor": "#000000"},
+    ]
+  ]);
+
   makeSVGPieChart("#identity-male-pie", [
-    {"label": "Leader", "value": 50, "color": "#0702d1", "lcolor": "#ffffff"},
-    {"label": "Listener", "value": 22, "color": "#3b38ff", "lcolor": "#ffffff",
+    {"label": "Leader", "value": 50, "color": "#0702d1", "lcolor": "#f7f7f8"},
+    {"label": "Listener", "value": 22, "color": "#3b38ff", "lcolor": "#f7f7f8",
       "xMargin": 1.25, "yMargin": 1.1},
-    {"label": "Mediator", "value": 28, "color": "#0c08fd", "lcolor": "#ffffff",
+    {"label": "Mediator", "value": 28, "color": "#0c08fd", "lcolor": "#f7f7f8",
       "xMargin": 1.1},
   ].reverse());
 
   makeSVGPieChart("#identity-female-pie", [
-    {"label": "Leader", "value": 36, "color": "#0702d1", "lcolor": "#ffffff"},
-    {"label": "Listener", "value": 46, "color": "#3b38ff", "lcolor": "#ffffff"},
-    {"label": "Mediator", "value": 18, "color": "#0c08fd", "lcolor": "#ffffff",
+    {"label": "Leader", "value": 36, "color": "#0702d1", "lcolor": "#f7f7f8"},
+    {"label": "Listener", "value": 46, "color": "#3b38ff", "lcolor": "#f7f7f8"},
+    {"label": "Mediator", "value": 18, "color": "#0c08fd", "lcolor": "#f7f7f8",
       "fontSize": 0.9, "xMargin": 1.4, "yMargin": 1.1},
   ].reverse());
 
   makeSVGPieChart("#future-male-pie", [
-    {"label": "Founder", "value": 50, "color": "#0702d1", "lcolor": "#ffffff"},
-    {"label": "VC", "value": 35, "color": "#3b38ff", "lcolor": "#ffffff"},
-    {"label": "Other", "value": 15, "color": "#0c08fd", "lcolor": "#ffffff",
+    {"label": "Founder", "value": 50, "color": "#0702d1", "lcolor": "#f7f7f8"},
+    {"label": "VC", "value": 35, "color": "#3b38ff", "lcolor": "#f7f7f8"},
+    {"label": "Other", "value": 15, "color": "#0c08fd", "lcolor": "#f7f7f8",
       "xMargin": 1.25, "yMargin": 1.2},
   ].reverse());
 
   makeSVGPieChart("#future-female-pie", [
-    {"label": "Founder", "value": 27, "color": "#0702d1", "lcolor": "#ffffff",
+    {"label": "Founder", "value": 27, "color": "#0702d1", "lcolor": "#f7f7f8",
       "xMargin": 1.1},
-    {"label": "VC", "value": 45, "color": "#3b38ff", "lcolor": "#ffffff"},
-    {"label": "Other", "value": 28, "color": "#0c08fd", "lcolor": "#ffffff"},
+    {"label": "VC", "value": 45, "color": "#3b38ff", "lcolor": "#f7f7f8"},
+    {"label": "Other", "value": 28, "color": "#0c08fd", "lcolor": "#f7f7f8"},
   ].reverse());
 
   makeSVGPieChart("#capable-male-pie", [
@@ -81,26 +103,26 @@ $(document).ready(function(){
   ].reverse());
 
   makeSVGPieChart("#sexhar-scope-drf", [
-    {"label": "Accurate", "value": 33, "color": "#da1301", "lcolor": "#ffffff"},
-    {"label": "Less", "value": 9, "color": "#fe3c2a", "lcolor": "#ffffff",
+    {"label": "Accurate", "value": 33, "color": "#da1301", "lcolor": "#f7f7f8"},
+    {"label": "Less", "value": 9, "color": "#fe3c2a", "lcolor": "#f7f7f8",
       "xMargin": 1.4, "yMargin": 1.8, "fontSize": 0.9},
-    {"label": "More", "value": 58, "color": "#8c0c01", "lcolor": "#ffffff"},
+    {"label": "More", "value": 58, "color": "#8c0c01", "lcolor": "#f7f7f8"},
   ].reverse())
 
   makeSVGPieChart("#sexhar-work-drf", [
-    {"label": "No", "value": 27, "color": "#da1301", "lcolor": "#ffffff"},
-    {"label": "Yes", "value": 73, "color": "#8c0c01", "lcolor": "#ffffff"},
+    {"label": "No", "value": 27, "color": "#da1301", "lcolor": "#f7f7f8"},
+    {"label": "Yes", "value": 73, "color": "#8c0c01", "lcolor": "#f7f7f8"},
   ].reverse())
 
   makeSVGPieChart("#sexhar-scope-founders", [
-    {"label": "Accurate", "value": 37, "color": "#da1301", "lcolor": "#ffffff"},
-    {"label": "Less", "value": 34, "color": "#fe3c2a", "lcolor": "#ffffff"},
-    {"label": "More", "value": 29, "color": "#8c0c01", "lcolor": "#ffffff"},
+    {"label": "Accurate", "value": 37, "color": "#da1301", "lcolor": "#f7f7f8"},
+    {"label": "Less", "value": 34, "color": "#fe3c2a", "lcolor": "#f7f7f8"},
+    {"label": "More", "value": 29, "color": "#8c0c01", "lcolor": "#f7f7f8"},
   ].reverse())
 
   makeSVGPieChart("#sexhar-work-founders", [
-    {"label": "No", "value": 40, "color": "#da1301", "lcolor": "#ffffff"},
-    {"label": "Yes", "value": 60, "color": "#8c0c01", "lcolor": "#ffffff"},
+    {"label": "No", "value": 40, "color": "#da1301", "lcolor": "#f7f7f8"},
+    {"label": "Yes", "value": 60, "color": "#8c0c01", "lcolor": "#f7f7f8"},
   ].reverse())
 });
 
@@ -115,6 +137,56 @@ function arrowHop() {
       $(this).animate({'margin-bottom': '0px'}, 350);
     });
   }
+}
+
+function makeSVGHorizStackedBarChart(element, data) {
+  WIDTH = 300;
+  HEIGHT_PER_BAR = 20;
+  X_SPACING = 3;
+  Y_SPACING = 10;
+  FONT_SIZE = 16;
+  let vis = d3.select(element).append("svg:svg").data([data])
+  let bars = vis.selectAll("g").data(data).enter()
+    .append("svg:g")
+    .selectAll("rect")
+      .attr("y", (d, i) => i * 20)
+    .data(function (d, i) {
+        left = 0;
+        d.forEach(function(dt) {
+          dt.height = i;
+          dt.left = left;
+          left += dt.value + X_SPACING;
+        });
+        return d;
+    }).enter()
+  
+  let denom = 100 + (data.length - 1) * X_SPACING
+  bars.append("svg:rect")
+    .style("fill", d => d.color)
+    .attr("x", (d, i) => d.left * WIDTH / denom)
+    .attr("y", d => d.height * (HEIGHT_PER_BAR + Y_SPACING))
+    .attr("width", d => d.value * WIDTH / denom)
+    .attr("height", HEIGHT_PER_BAR)
+  
+  let overhang = 0;
+  bars.append("svg:text")
+    .text(d => `${d.label} : ${d.value}%`)
+    .attr("font-size", FONT_SIZE)
+    .attr("x", function(d, i) {
+      if (i == data.length - 1) {
+        let spacing = X_SPACING * WIDTH / denom
+        overhang = Math.max(overhang, this.getComputedTextLength() + spacing);
+        return WIDTH + spacing;
+      } else {
+        let midpoint = (d.left + X_SPACING * i + d.value) * WIDTH / denom / 2;
+        return midpoint - this.getComputedTextLength() / 2;
+      }
+    }).attr("y", d => (d.height + 1) * (HEIGHT_PER_BAR + Y_SPACING) - Y_SPACING 
+      - (HEIGHT_PER_BAR - FONT_SIZE))
+    .style("fill", d => d.lcolor)
+
+  vis.attr("viewBox", `0 0 ${WIDTH + overhang} ${(HEIGHT_PER_BAR + Y_SPACING) 
+    * data.length - Y_SPACING}`)
 }
 
 function makeSVGPieChart(element, data) {

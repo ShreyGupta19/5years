@@ -6,6 +6,7 @@ $h1-multiplier: 3.273;
 $h2-multiplier: 1.455;
 $h3-multiplier: 1.455;
 $big-p-multiplier: 1.273;
+$small-p-multiplier: 0.818;
 
 /* ---------------------- COLORS ----------------------- */
 /* -------------------- Main Colors -------------------- */
@@ -297,7 +298,7 @@ header a, header div {
 .content-page {
   width: 100%;
   margin: 30vh auto;
-  padding: 0% 15%;
+  padding: 0% 10%;
   max-width: 1200px;
   position: relative;
   
@@ -306,8 +307,8 @@ header a, header div {
     font-family: Lemonada, CircularStd, Helvetica, Arial, sans-serif;
     position: absolute;
     line-height: 0.8;
-    top: -0.3em;
-    left: 10%;
+    top: -0.15em;
+    left: 8%;
     opacity: 0.4;
     z-index: -1;
   }
@@ -375,6 +376,96 @@ header a, header div {
   }
 }
 
+.vert-bar {
+  width: 65%;
+
+  img {
+    width: 100%;
+  }
+
+  p {
+    @include medium;
+    font-size: $big-p-multiplier * $normal-font-size;
+  }
+}
+
+.horiz-bar {
+  .bar-diagram {
+    width: 65%;
+  }
+
+  p {
+    @include medium;
+    font-size: $big-p-multiplier * $normal-font-size;
+  }
+}
+
+.big-number {
+  width: 75%;
+  
+  .big-number-diagram {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+  }
+
+  .bigger, .smaller {
+    @include bold;
+    vertical-align: bottom;
+    margin-right: 2%;
+  }
+
+  .bigger {
+    color: $DRFBlue;
+
+    .number {
+      font-size: 3 * $normal-font-size;
+      line-height: 2.5 * $normal-font-size;
+    }
+  }
+
+  .smaller {
+    color: $DRFGreen;
+
+    .number {
+      font-size: 2.25 * $normal-font-size;
+      line-height: 1.75 * $normal-font-size;
+    }
+  }
+
+  .label {
+    font-size: $small-p-multiplier * $normal-font-size;
+  }
+
+  p {
+    @include medium;
+    font-size: $big-p-multiplier * $normal-font-size;
+    margin-bottom: 0;
+  }
+}
+
+#sexhar-soln-table {
+  @include medium;
+  width: 100%;
+  // white-space: nowrap;
+
+  tr {
+    td {
+      padding: 0.25em 0;
+    }
+
+    td:first-of-type {
+      color: $DRFRed;
+      padding-right: 0.5em;
+    }
+
+    td:last-of-type {
+      padding-left: 0.5em;
+      width: 100%;
+    }
+  }
+}
+
 /*---------------------------Footer---------------------------*/
 footer {
   display: flex;
@@ -412,8 +503,30 @@ footer {
       margin: 0;
     }
 
+    .arrow {
+      display: inline-block;
+      background-image: url('../Media/Icons/DownArrow.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 0.7778 * $normal-font-size;
+      height: $normal-font-size;
+      margin-top: $normal-font-size / 2;
+      margin-bottom: $normal-font-size;
+    }
+
     form {
-      color: $black;
+      input {
+        background-color: rgba(0, 0, 0, 0);
+        border: 1px solid $N30;
+        color: $N30;
+      }
+
+      button {
+        background-color: $informational;
+        color: $fauxwhite;
+        margin-top: $normal-font-size / 2;
+        padding: 0 5%;
+      }
     }
   }
 
