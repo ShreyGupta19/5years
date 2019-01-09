@@ -74,7 +74,7 @@ header a, header div {
 #title-splash {
   width: 100%;
   height: 100vh;
-  background-image: url('../Media/Graphics/RainbowCatcher.png');
+  background-image: url('../media/Graphics/RainbowCatcher.png');
   background-repeat: no-repeat;
   background-size: 120vw;
   background-position: center bottom;
@@ -101,7 +101,7 @@ header a, header div {
 
     .arrow {
       display: inline-block;
-      background-image: url('../Media/Icons/DownArrow.png');
+      background-image: url('../media/Icons/DownArrow.png');
       background-size: cover;
       background-repeat: no-repeat;
       width: 0.7778 * $h2-multiplier * $normal-font-size;
@@ -308,7 +308,7 @@ footer {
 
   &:after {
     content: "";
-    background-image: url('../Media/Icons/DRFLogoWhite.png');
+    background-image: url('../media/Icons/DRFLogoWhite.png');
     background-repeat: no-repeat;
     background-size: 50vw;
     background-position: left -5vw bottom -16vw;
@@ -342,7 +342,7 @@ footer {
 
       .arrow {
         display: inline-block;
-        background-image: url('../Media/Icons/DownArrow.png');
+        background-image: url('../media/Icons/DownArrow.png');
         background-size: cover;
         background-repeat: no-repeat;
         width: 0.7778 * $normal-font-size;

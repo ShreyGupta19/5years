@@ -101,67 +101,67 @@ $L40: #B1BCFF; // used for links underscores on white backgrounds
 
 @font-face {
   font-family: CircularStd; 
-  src: url('../Fonts/CircularStd-Book.otf');
+  src: url('../fonts/CircularStd-Book.otf');
   @include book;
   font-style: normal;
 }
 
 @font-face {
   font-family: CircularStd; 
-  src: url('../Fonts/CircularStd-BookItalic.otf');
+  src: url('../fonts/CircularStd-BookItalic.otf');
   @include book;
   font-style: italic;
 }
 
 @font-face {
   font-family: CircularStd; 
-  src: url('../Fonts/CircularStd-Medium.otf');
+  src: url('../fonts/CircularStd-Medium.otf');
   @include medium;
   font-style: normal;
 }
 
 @font-face {
   font-family: CircularStd; 
-  src: url('../Fonts/CircularStd-MediumItalic.otf');
+  src: url('../fonts/CircularStd-MediumItalic.otf');
   @include medium;
   font-style: italic;
 }
 
 @font-face {
   font-family: CircularStd; 
-  src: url('../Fonts/CircularStd-Bold.otf');
+  src: url('../fonts/CircularStd-Bold.otf');
   @include bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: CircularStd; 
-  src: url('../Fonts/CircularStd-BoldItalic.otf');
+  src: url('../fonts/CircularStd-BoldItalic.otf');
   @include bold;
   font-style: italic;
 }
 
 @font-face {
   font-family: Lemonada; 
-  src: url('../Fonts/Lemonada-Light.ttf');
+  src: url('../fonts/Lemonada-Light.ttf');
   @include light;
 }
 
 @font-face {
   font-family: Lemonada; 
-  src: url('../Fonts/Lemonada-Regular.ttf');
+  src: url('../fonts/Lemonada-Regular.ttf');
   @include book;
 }
 
 @font-face {
   font-family: Lemonada; 
-  src: url('../Fonts/Lemonada-SemiBold.ttf');
+  src: url('../fonts/Lemonada-SemiBold.ttf');
   @include semi-bold;
 }
 
 @font-face {
   font-family: Lemonada; 
-  src: url('../Fonts/Lemonada-Bold.ttf');
+  src: url('../fonts/Lemonada-Bold.ttf');
   @include bold;
 }
 

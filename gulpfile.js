@@ -55,17 +55,17 @@ gulp.task('useref', function() {
 
 // Optimizing Images 
 gulp.task('images', function() {
-  return gulp.src('app/Media/**/*.+(png|jpg|jpeg|gif|svg)')
+  return gulp.src('app/media/**/*.+(png|jpg|jpeg|gif|svg)')
     .pipe(cache(imagemin({
       interlaced: true,
     })))
-    .pipe(gulp.dest('dist/Media'))
+    .pipe(gulp.dest('dist/media'))
 });
 
 // Copying fonts 
 gulp.task('fonts', function() {
-  return gulp.src('app/Fonts/**/*')
-    .pipe(gulp.dest('dist/Fonts'))
+  return gulp.src('app/fonts/**/*')
+    .pipe(gulp.dest('dist/fonts'))
 })
 
 // Cleaning 
@@ -76,7 +76,7 @@ gulp.task('clean', function() {
 })
 
 gulp.task('clean:dist', function() {
-  return del.sync(['dist/**/*', '!dist/Media', '!dist/Media/**/*']);
+  return del.sync(['dist/**/*', '!dist/media', '!dist/media/**/*']);
 });
 
 // Build Sequences
