@@ -28,6 +28,6 @@ Temporary Items
 .apdisk
 
 # SASS
-css/decorate.css
-css/decorate.css.map
+css/*.css
+css/*.css.map
 # End of https://www.gitignore.io/api/osx

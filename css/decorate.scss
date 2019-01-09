@@ -1,169 +1,4 @@
-/* -------------------- GLOBAL VARS -------------------- */
-
-/* -------------------- FONT SIZES --------------------- */
-$normal-font-size: 1.375rem;
-$h1-multiplier: 3.273;
-$h2-multiplier: 1.455;
-$h3-multiplier: 1.455;
-$big-p-multiplier: 1.273;
-$small-p-multiplier: 0.818;
-
-/* ---------------------- COLORS ----------------------- */
-/* -------------------- Main Colors -------------------- */
-$DRFBlue: #0702D1;
-$DRFRed: #DA1301;
-$DRFYellow: #FEAB06;
-$DRFGreen: #1DD79D;
-/* ------------------- Neutral Tones ------------------- */
-$N0: #FFFFFF;
-$white: $N0;
-$N3: #F7F7F8;
-$fauxwhite: $N3; //used for white text on a black background or gray backgrounds
-$N5: #F2F2F4;
-$N10: #DADDE0;
-$N30: #A5ACB1;
-$gray: $N30; //used as gray text on a black background
-$N40: #858E94;      //used when we need a gray background
-$N50: #6D757E;
-$darkgray: $N50; //used as gray text on a white background
-$N80: #313543;
-$N90: #1B202D;
-$offblack: $N90; //used for black text on a white background
-$N95: #050B1A;
-$black: $N95;
-$N100: #000000;
-/* ------------------ Feedback Colors ------------------ */
-// We use these 4 colors to give the user knowledge of the range of possible 
-// actions and their results. They should be used only as this and nowhere else.
-$informational: #3472FF; // shade of blue for hyperlinks + positive feedback 
-$error: #EO3229; // shade of red for indicating failure
-$warning: #FFD23D; // shade of yellow for feedback text 
-$success: #12A577; // shade of green for indicating success
-
-/* ----------------------- Blues ----------------------- */
-$B90: #0503A6;
-$B70: #0702D1; // same as $DRFBlue
-$B50: #040BEC;
-$B40: #2439F5;
-$B5: #D8DDFD;
-
-/* ------------------------ Reds ----------------------- */
-$R90: #B80F00;
-$R70: #DA1301; // same as $DRFRed
-$R50: #F11809;
-$R40: #F24E45;
-$R5: #FBDDDA;
-
-/* ---------------------- Yellows ---------------------- */
-$Y90: #EB9C00;
-$Y70: #FEAB06; // same as $DRFYellow
-$Y50: #FEC025;
-$Y40: #FAD552;
-$Y5: #FEF8D8;
-
-/* ----------------------- Greens ---------------------- */
-$Y90: #15B784;
-$Y70: #1DD79D; // same as $DRFGreen
-$Y50: #35E3AC;
-$Y40: #70E6C0;
-$G5: #DAFBF1;
-
-/* ----------------------- Links ----------------------- */
-$L40: #B1BCFF; // used for links underscores on white backgrounds
-
-
-/* ----------------------- RULES ----------------------- */
-
-* {
-  box-sizing: border-box;
-}
-
-/* ------------------- Text and Fonts ------------------ */
-@mixin light {
-  font-weight: 300;
-}
-
-@mixin book {
-  font-weight: 400;
-}
-
-@mixin medium {
-  font-weight: 500;
-}
-
-@mixin semi-bold {
-  font-weight: 600;
-}
-
-@mixin bold {
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: CircularStd; 
-  src: url('../Fonts/CircularStd-Book.otf');
-  @include book;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: CircularStd; 
-  src: url('../Fonts/CircularStd-BookItalic.otf');
-  @include book;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: CircularStd; 
-  src: url('../Fonts/CircularStd-Medium.otf');
-  @include medium;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: CircularStd; 
-  src: url('../Fonts/CircularStd-MediumItalic.otf');
-  @include medium;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: CircularStd; 
-  src: url('../Fonts/CircularStd-Bold.otf');
-  @include bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: CircularStd; 
-  src: url('../Fonts/CircularStd-BoldItalic.otf');
-  @include bold;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: Lemonada; 
-  src: url('../Fonts/Lemonada-Light.ttf');
-  @include light;
-}
-
-@font-face {
-  font-family: Lemonada; 
-  src: url('../Fonts/Lemonada-Regular.ttf');
-  @include book;
-}
-
-@font-face {
-  font-family: Lemonada; 
-  src: url('../Fonts/Lemonada-SemiBold.ttf');
-  @include semi-bold;
-}
-
-@font-face {
-  font-family: Lemonada; 
-  src: url('../Fonts/Lemonada-Bold.ttf');
-  @include bold;
-}
+@import 'base';
 
 h1 {
   font-size: $h1-multiplier * $normal-font-size;
@@ -180,7 +15,6 @@ h2 {
 h3 {
   font-size: $h3-multiplier * $normal-font-size;
   @include bold;
-  margin: 0;
   margin: 0.5 * $h3-multiplier * $normal-font-size 0;
 }
 
@@ -233,10 +67,6 @@ header a, header div {
 /* --------------------- Title Page -------------------- */
 #title-page {
   background-color: $N100;
-  background-image: url('../Media/Graphics/RainbowCatcher.png'), url('../Media/Graphics/RainbowCatcher.png');
-  background-repeat: no-repeat;
-  background-size: 130vw, 100vw 100vh;
-  background-position: -30vw 4vh, left -60vw bottom 4vh;
   color: $fauxwhite;
   padding-bottom: 30vh;
 }
@@ -244,41 +74,44 @@ header a, header div {
 #title-splash {
   width: 100%;
   height: 100vh;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  position: relative;
-  padding: 55vh 7.5% 0vh 7.5%;
+  background-image: url('../Media/Graphics/RainbowCatcher.png');
+  background-repeat: no-repeat;
+  background-size: 120vw;
+  background-position: center bottom;
+  padding: 0 7.5%;
   text-align: left;
   overflow-x: hidden;
+  display: table;
   
-  h1  {
-    font-size: 0.861 * $h1-multiplier * $normal-font-size;
-    margin: 0;
-  }
+  #title-splash-contents {
+    display: table-cell; 
+    vertical-align: middle;
 
-  h2  {
-    font-size: $h2-multiplier * $normal-font-size;
-    margin: 0;
-    font-weight: 500;
-  }
+    h1  {
+      font-size: 0.861 * $h1-multiplier * $normal-font-size;
+      margin: 0;
+      line-height: 0.861 * $h1-multiplier * $normal-font-size;
+    }
 
-  .arrow {
-    display: inline-block;
-    background-image: url('../Media/Icons/DownArrow.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 0.7778 * $h2-multiplier * $normal-font-size;
-    height: $h2-multiplier * $normal-font-size;
-    margin-top: $h2-multiplier * $normal-font-size / 2;
+    h2  {
+      font-size: $h2-multiplier * $normal-font-size;
+      margin: ($h2-multiplier * $normal-font-size / 2) 0;
+      font-weight: 500;
+    }
+
+    .arrow {
+      display: inline-block;
+      background-image: url('../Media/Icons/DownArrow.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 0.7778 * $h2-multiplier * $normal-font-size;
+      height: $h2-multiplier * $normal-font-size;
+    }
   }
 }
 
 #intro-1  {
-  margin-left: 45vw;
-  margin-top: -10vh;
-  margin-right: 5vw;
+  margin: -10vh 5vw 0 45vw;
   padding: 3vw 4vw;
   width: 50vw;
   background-color: $N100;
@@ -296,9 +129,9 @@ header a, header div {
 
 /* -------------------- Content Pages ------------------ */
 .content-page {
-  width: 100%;
+  width: 100vw;
   margin: 30vh auto;
-  padding: 0% 10%;
+  padding: 0 10vw;
   max-width: 1200px;
   position: relative;
   
@@ -355,7 +188,9 @@ header a, header div {
 
   .pie-diagram {
     flex: 1 1;
-    max-width: 250px;
+    svg {
+      max-width: 250px;
+    }
   }
 
   .pie-description {
@@ -377,7 +212,7 @@ header a, header div {
 }
 
 .vert-bar {
-  width: 65%;
+  width: 75%;
 
   img {
     width: 100%;
@@ -391,7 +226,7 @@ header a, header div {
 
 .horiz-bar {
   .bar-diagram {
-    width: 65%;
+    width: 75%;
   }
 
   p {
@@ -526,6 +361,8 @@ footer {
         color: $fauxwhite;
         margin-top: $normal-font-size / 2;
         padding: 0 5%;
+        border: 0;
+        border-radius: 3px;
       }
     }
   }

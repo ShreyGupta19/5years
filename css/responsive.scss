@@ -1,0 +1,203 @@
+@import 'base';
+
+/* -------------------- FONT SIZES --------------------- */
+$normal-font-size: 1.125rem; // 18pt font at 100% zoom
+$h1-multiplier: 3.333; // 60pt font at 100% zoom
+$h2-multiplier: 1.555; // 28pt font at 100% zoom
+$h3-multiplier: 1.555; // 28pt font at 100% zoom
+$big-p-multiplier: 1.222; // 22pt font at 100% zoom
+$small-p-multiplier: 0.833; // 15pt font at 100% zoom
+
+/* ------------------- SCREEN SIZES -------------------- */
+$sm-screen: 600px;
+$md-screen: 900px;
+$lg-screen: 1200px;
+
+@media screen and (max-width: 920px) {
+  #title-splash {
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: $md-screen) {
+  h1 {
+    font-size: $h1-multiplier * $normal-font-size;
+    margin: 0.5 * $h1-multiplier * $normal-font-size 0;
+  }
+
+  h2 {
+    font-size: $h2-multiplier * $normal-font-size;
+    margin: 0.5 * $h2-multiplier * $normal-font-size 0;
+  }
+
+  h3 {
+    font-size: $h3-multiplier * $normal-font-size;
+    margin: 0.5 * $h3-multiplier * $normal-font-size 0;
+  }
+
+  body {
+    font-size: $normal-font-size;
+  }
+
+  #title-page {
+    padding-bottom: 10vh;
+    background-image: none;
+  }
+
+  #title-splash {
+    background-size: cover;
+    margin: 0 5vw;
+    width: 100%;
+    height: 100vh;
+    
+    h1  {
+      font-size: 0.8 * $h1-multiplier * $normal-font-size;
+      line-height: 0.85 * $h1-multiplier * $normal-font-size;
+    }
+
+    h2  {
+      font-size: $h2-multiplier * $normal-font-size;
+      margin: ($h2-multiplier * $normal-font-size / 2) 0;
+    }
+
+    .arrow {
+      width: 0.7778 * $h2-multiplier * $normal-font-size;
+      height: $h2-multiplier * $normal-font-size;
+    }
+  }
+
+  #intro-1  {
+    margin: 0;
+    width: 100vw;
+    padding: 5vh 7.5vw;
+  }
+
+  #intro-2  {
+    margin: 0;
+    padding: 5vh 7.5vw;
+  }
+
+  .content-page {
+    margin: 15vh auto;
+    padding: 0 7.5vw;
+    
+    .header-number {
+      font-size: 16.667 * $normal-font-size;
+      top: -0.1em;
+      left: 5%;
+    }
+
+    img {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  .horiz-bar {
+    .bar-diagram {
+      width: 80%;
+    }
+  }
+
+  .big-number {
+    width: 80%;
+  }
+
+  .vert-bar {
+    width: 80%;
+  }
+
+  .pie {
+    .pie-description {
+      flex: 2 1;
+    }
+  }
+
+  footer {
+    &:after {
+      background-size: 80vw;
+      background-position: left -10vw bottom 50%;
+    }
+  }
+}
+
+@media screen and (max-width: $sm-screen) {
+  .horiz-bar {
+    .bar-diagram {
+      width: 100%;
+    }
+
+    p {
+      font-size: $big-p-multiplier * $normal-font-size;
+    }
+  }
+
+  .vert-bar {
+    width: 100%;
+
+    p {
+      font-size: $big-p-multiplier * $normal-font-size;
+    }
+  }
+
+  .pie {
+    margin-left: 0;
+    margin-right: 0;
+    flex-direction: column-reverse;
+    text-align: center;
+
+    .pie-diagram {
+      flex: 1 1;
+    }
+
+    .pie-description {
+      padding: 0;
+    }
+
+    .pie-tagline {
+      font-size: $big-p-multiplier * $normal-font-size;
+    }
+  }
+
+  .big-number {
+    width: 100%;
+
+    .big-number-diagram {
+      justify-content: center;
+    }
+
+    .bigger {
+      margin-right: 5%;
+      .number {
+        font-size: 5 * $normal-font-size;
+        line-height: 5 * $normal-font-size;
+      }
+    }
+
+    .smaller {
+      margin-left: 5%;
+      .number {
+        font-size: 3.5 * $normal-font-size;
+        line-height: 3.5 * $normal-font-size;
+      }
+    }
+
+    .label {
+      font-size: $normal-font-size;
+    }
+
+    p {
+      font-size: $big-p-multiplier * $normal-font-size;
+    }
+  }
+
+  footer {
+    & > * {
+      flex: 1 1 100%;
+    }
+
+    &:after {
+      background-size: 100vw;
+    }
+  }
+}
