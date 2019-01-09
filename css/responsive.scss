@@ -8,10 +8,21 @@ $h3-multiplier: 1.555; // 28pt font at 100% zoom
 $big-p-multiplier: 1.222; // 22pt font at 100% zoom
 $small-p-multiplier: 0.833; // 15pt font at 100% zoom
 
-/* ------------------- SCREEN SIZES -------------------- */
-$sm-screen: 600px;
-$md-screen: 900px;
-$lg-screen: 1200px;
+@media screen and (min-width: $lg-screen) {
+  #intro-2  {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $lg-screen;
+  }
+
+  footer {
+    #footer-contents {
+      max-width: $lg-screen;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
 
 @media screen and (max-width: 920px) {
   #title-splash {
@@ -192,8 +203,10 @@ $lg-screen: 1200px;
   }
 
   footer {
-    & > * {
-      flex: 1 1 100%;
+    #footer-contents {
+      & > * {
+        flex: 1 1 100%;
+      }
     }
 
     &:after {
