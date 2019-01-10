@@ -133,8 +133,8 @@ function arrowHop() {
   if (lastCall + 1000 < now) {
     lastCall = now;
     $('.arrow').finish().show()
-    .animate({'margin-bottom': '15px'}, 200, function(){
-      $(this).animate({'margin-bottom': '0px'}, 350);
+    .animate({'margin-top': '15px'}, 200, function(){
+      $(this).animate({'margin-top': '0px'}, 350);
     });
   }
 }
