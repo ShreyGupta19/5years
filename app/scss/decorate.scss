@@ -28,7 +28,7 @@ body {
 p a {
   text-decoration: none;
   color: inherit;
-  background-size: auto 1.1 * $normal-font-size;
+  background-size: auto 1.1em;
   background-image: linear-gradient(rgba(0, 0, 0, 0) 70%, rgba($L40, 0.9) 70%);
   background-repeat: repeat-x;
 }
@@ -141,26 +141,26 @@ header a, header div {
 .content-page {
   width: 100vw;
   padding: 0 20vw;
-  max-width: $lg-screen;
   position: relative;
   
   // :first-of-type cannot be used on arbitary selectors.
   // Below is a workaround to make first content-page have less margin.
-  margin: ($content-page-v-margin / 2) auto $content-page-v-margin auto;
-  & ~ .content-page {
-    margin-top: $content-page-v-margin / 2;
-  }
+  margin: $content-page-v-margin auto;
 
-  .header-number {
-    font-size: 18.18 * $normal-font-size;
-    font-family: Lemonada, CircularStd, Helvetica, Arial, sans-serif;
-    @include semi-bold;
-    position: absolute;
-    line-height: 0.8;
-    top: -0.15em;
-    left: 10%;
-    opacity: 0.4;
-    z-index: -1;
+  .header-contents {
+    position: relative;
+
+    .header-number {
+      font-size: 18.18 * $normal-font-size;
+      font-family: Lemonada, CircularStd, Helvetica, Arial, sans-serif;
+      @include semi-bold;
+      line-height: 1;
+      opacity: 0.4;
+      z-index: -1;
+      position: absolute;
+      bottom: -0.05em;
+      left: -0.3ch;
+    }
   }
 
   &:nth-child(4n+1) .header-number {
@@ -382,7 +382,6 @@ footer {
           margin-top: $normal-font-size / 2;
           padding: 0 5%;
           border: 0;
-          border-radius: 3px;
         }
       }
     }

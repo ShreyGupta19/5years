@@ -25,6 +25,11 @@ $content-page-v-margin: 70vh;
       margin-right: auto;
     }
   }
+
+  .content-page {
+    width: $lg-screen;
+    padding: 0 (0.2 * $lg-screen);
+  }
 }
 
 @media screen and (max-width: 920px) {
@@ -93,18 +98,14 @@ $content-page-v-margin: 70vh;
 
   .content-page {
     padding: 0 7.5vw;
-
-    // :first-of-type cannot be used on arbitary selectors.
-    // Below is a workaround to make first content-page have less margin.
-    margin: ($content-page-v-margin / 2) auto $content-page-v-margin auto;
-    & ~ .content-page {
-      margin-top: $content-page-v-margin / 2;
-    }
+    margin: $content-page-v-margin auto;
     
-    .header-number {
-      font-size: 16.667 * $normal-font-size;
-      top: -0.1em;
-      left: 5%;
+    .header-contents {
+      .header-number {
+        font-size: 22 * $normal-font-size;
+        letter-spacing: -0.1ch;
+        left: -0.1ch;
+      }
     }
   }
 
@@ -190,18 +191,15 @@ $content-page-v-margin: 70vh;
 
     .bigger {
       margin-right: 5%;
-      .number {
-        font-size: 5 * $normal-font-size;
-        line-height: 5 * $normal-font-size;
-      }
     }
 
     .smaller {
       margin-left: 5%;
-      .number {
-        font-size: 3.5 * $normal-font-size;
-        line-height: 3.5 * $normal-font-size;
-      }
+    }
+
+    .number {
+      font-size: 4 * $normal-font-size;
+      line-height: 0.8 * 4 * $normal-font-size;
     }
 
     .label {
