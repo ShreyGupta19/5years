@@ -8,6 +8,9 @@ $h3-multiplier: 1.555; // 28pt font at 100% zoom
 $big-p-multiplier: 1.222; // 22pt font at 100% zoom
 $small-p-multiplier: 0.833; // 15pt font at 100% zoom
 
+/* ------------------- SPACING VARS -------------------- */
+$content-page-v-margin: 70vh;
+
 @media screen and (min-width: $lg-screen) {
   #intro-2  {
     margin-left: auto;
@@ -51,7 +54,7 @@ $small-p-multiplier: 0.833; // 15pt font at 100% zoom
   }
 
   #title-page {
-    padding-bottom: 10vh;
+    padding-bottom: $content-page-v-margin / 2;
     background-image: none;
   }
 
@@ -89,8 +92,14 @@ $small-p-multiplier: 0.833; // 15pt font at 100% zoom
   }
 
   .content-page {
-    margin: 15vh auto;
     padding: 0 7.5vw;
+
+    // :first-of-type cannot be used on arbitary selectors.
+    // Below is a workaround to make first content-page have less margin.
+    margin: ($content-page-v-margin / 2) auto $content-page-v-margin auto;
+    & ~ .content-page {
+      margin-top: $content-page-v-margin / 2;
+    }
     
     .header-number {
       font-size: 16.667 * $normal-font-size;

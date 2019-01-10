@@ -69,7 +69,7 @@ header a, header div {
 #title-page {
   background-color: $N100;
   color: $fauxwhite;
-  padding-bottom: 30vh;
+  padding-bottom: $content-page-v-margin / 2;
 }
 
 #title-splash {
@@ -139,11 +139,17 @@ header a, header div {
 /* -------------------- Content Pages ------------------ */
 .content-page {
   width: 100vw;
-  margin: 30vh auto;
   padding: 0 20vw;
   max-width: $lg-screen;
   position: relative;
   
+  // :first-of-type cannot be used on arbitary selectors.
+  // Below is a workaround to make first content-page have less margin.
+  margin: ($content-page-v-margin / 2) auto $content-page-v-margin auto;
+  & ~ .content-page {
+    margin-top: $content-page-v-margin / 2;
+  }
+
   .header-number {
     font-size: 18.18 * $normal-font-size;
     font-family: Lemonada, CircularStd, Helvetica, Arial, sans-serif;
@@ -151,7 +157,7 @@ header a, header div {
     position: absolute;
     line-height: 0.8;
     top: -0.15em;
-    left: 18%;
+    left: 10%;
     opacity: 0.4;
     z-index: -1;
   }
