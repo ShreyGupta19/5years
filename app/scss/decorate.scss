@@ -141,13 +141,13 @@ header a, header div {
 .content-page {
   width: 100vw;
   padding: 0 20vw;
-  position: relative;
-  
-  // :first-of-type cannot be used on arbitary selectors.
-  // Below is a workaround to make first content-page have less margin.
+
   margin: $content-page-v-margin auto;
 
   .header-contents {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     position: relative;
 
     .header-number {
@@ -157,9 +157,9 @@ header a, header div {
       line-height: 1;
       opacity: 0.4;
       z-index: -1;
-      position: absolute;
-      bottom: -0.05em;
       left: -0.3ch;
+      position: absolute;
+      letter-spacing: -0.1ch;
     }
   }
 
