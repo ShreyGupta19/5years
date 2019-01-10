@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
   // Controls the hopping arrow animation
-  $('.arrow').mouseenter(function(){
+  $('#title-splash .arrow').mouseenter(function(){
     arrowHop();
   });
 
@@ -140,8 +140,8 @@ function arrowHop() {
   if (lastCall + 1000 < now) {
     lastCall = now;
     $('.arrow').finish().show()
-    .animate({'margin-top': '15px'}, 200, function(){
-      $(this).animate({'margin-top': '0px'}, 350);
+    .animate({'bottom': '-15px'}, 200, function(){
+      $(this).animate({'bottom': '0px'}, 350);
     });
   }
 }
