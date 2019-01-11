@@ -28,13 +28,19 @@ body {
 p a {
   text-decoration: none;
   color: inherit;
-  background-size: auto 1.1em;
-  background-image: linear-gradient(rgba(0, 0, 0, 0) 70%, rgba($L40, 0.9) 70%);
+  background-size: auto 2em;
+  background-image: linear-gradient(rgba(0, 0, 0, 0) 43%, rgba($L40, 0.9) 43%);
   background-repeat: repeat-x;
+  transition: background-position-y 300ms, color 300ms;
+}
+
+p a:hover {
+  background-position-y: 100%;
+  transition: background-position-y 300ms, color 300ms;
 }
 
 p a.dark {
-  background-image: linear-gradient(rgba(0, 0, 0, 0) 70%, rgba($informational, 0.9) 70%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0) 43%, rgba($informational, 0.9) 43%);
 }
 
 .quote, %quote {
