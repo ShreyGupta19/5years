@@ -134,7 +134,7 @@ $content-page-v-margin: 70vh;
   footer {
     &:after {
       background-size: 80vw;
-      background-position: left -10vw bottom 50%;
+      background-position: left -8vw bottom 50%;
     }
   }
 }
@@ -215,6 +215,10 @@ $content-page-v-margin: 70vh;
     #footer-contents {
       & > * {
         flex: 1 1 100%;
+      }
+
+      #mailing-list {
+        align-self: flex-start;
       }
     }
 
