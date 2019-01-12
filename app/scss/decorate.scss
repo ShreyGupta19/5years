@@ -171,6 +171,10 @@ header a, header div {
       position: absolute;
       letter-spacing: -0.1ch;
     }
+
+    .header-title {
+      hyphens: manual;
+    }
   }
 
   &:nth-child(4n+1) .header-number {
