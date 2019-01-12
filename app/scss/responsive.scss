@@ -105,6 +105,8 @@ $content-page-v-margin: 70vh;
         font-size: 22 * $normal-font-size;
         letter-spacing: -0.1ch;
         left: -0.1ch;
+        max-width: 100vw;
+        overflow-x: hidden;
       }
     }
   }
