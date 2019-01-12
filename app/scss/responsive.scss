@@ -169,8 +169,8 @@ $content-page-v-margin: 70vh;
     flex-direction: column-reverse;
     text-align: center;
 
-    .pie-diagram {
-      flex: 1 1;
+    .pie-diagram svg {
+      margin: 0 auto;
     }
 
     .pie-description {
